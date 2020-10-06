@@ -18,6 +18,16 @@
 
 class UPlayFabJsonObject;
 
+UENUM()
+enum class EGenericErrorCodes : int8
+{
+    Invalid = -1 UMETA(Hidden),
+
+    Success = 0,
+
+    Fail = 1,
+};
+
 //////////////////////////////////////////////////////////////////////////
 // Generated PlayFab <%- api.name %> API Functions
 //////////////////////////////////////////////////////////////////////////
