@@ -103,8 +103,8 @@ function getPropertyCppType(property, datatype) {
                 return "FString " + propSafeName + ";";
             } else if (isCollection) {
                 return "UPlayFabJsonObject* " + propSafeName + " = nullptr;";
-            } else if (property.isenum) {
-                return "E" + getDataTypeSafeName(property, "actualtype") + " " + propSafeName + ";";
+            // } else if (property.isenum) {
+            //     return "E" + getDataTypeSafeName(property, "actualtype") + " " + propSafeName + ";";
             } else {
                 return "FString " + propSafeName + ";";
             }
