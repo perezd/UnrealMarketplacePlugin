@@ -11,6 +11,16 @@
 // PlayFab enums start with "pfenum_" in order to avoid code-name conflicts - For JSON, remove that prefix, and send only the expected portion (the display name is not fetchable when compiled)
   static const FString prefix = TEXT("pfenum_");
 
+UENUM()
+enum class EGenericErrorCodes : int8
+{
+    Invalid = -1 UMETA(Hidden),
+
+    Success = 0,
+
+    Fail = 1,
+};
+
 template <typename EnumType>
 static FORCEINLINE bool GetEnumValueFromString(const FString& enumTypeName, const FString& input, EnumType& output)
 {
